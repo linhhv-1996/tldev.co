@@ -47,7 +47,7 @@ function rehypeDemoteH1AndStripTitle() {
 }
 
 export default defineConfig({
-  site: 'https://www.tldev.co',
+  site: 'https://tldev.co',
 
   integrations: [expressiveCode({
     themes: ['catppuccin-latte', 'ayu-dark'],
