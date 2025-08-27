@@ -1,0 +1,77 @@
+---
+import PageHead from '@/components/PageHead.astro'
+import Search from '@/components/react/search'
+import PaginationComponent from '@/components/ui/pagination'
+import Layout from '@/layouts/Layout.astro'
+import { getAllPosts } from '@/lib/data-utils'
+import type { PaginateFunction } from 'astro'
+import { SITE } from '@/consts'
+
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction
+}) {
+  const allPosts = await getAllPosts()
+  return paginate(allPosts, { pageSize: 5 })
+}
+
+const { page } = Astro.props
+const searchList = await getAllPosts()
+const currentUrl = Astro.url;
+---
+
+<Layout canonicalUrl={currentUrl}>
+  <PageHead slot="head" title="Blog" />
+  
+  
+  <section class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-18rem),100%)_minmax(0px,1fr)]
+           gap-y-12 px-4 py-8 md:px-6">
+
+           <section class="col-start-2 flex flex-col gap-y-4" aria-labelledby="all-posts-title" role="region">
+
+                <!-- Hero -->
+    <div class="col-start-2">
+      <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left">
+        
+        <!-- <div class="relative overflow-hidden rounded-lg sm:shrink-0 sm:overflow-hidden sm:rounded-lg">
+          <Logo className="h-auto w-40 object-cover sm:w-48 md:w-56 lg:w-64 " />
+        </div> -->
+
+        <div class="mt-8 sm:mt-0 sm:max-w-xl">
+          <h1 class="font-custom text-foreground text-start text-4xl font-extrabold sm:text-5xl">{SITE.title}</h1>
+          <div class="mt-4 flex items-center gap-2" aria-label="location">
+            <span class="bg-primary text-primary-foreground ring-primary/30 rounded-full px-3 py-1 text-sm font-medium ring-1">
+              Curated TL;DRs for builders.
+            </span>
+        
+          </div>
+          <p class="text-md text-foreground mt-4 text-start font-sans" title="description" aria-label="description">
+            {SITE.description}
+          </p>
+        </div>
+      </div>
+    </div>
+
+            <div class="flex min-h-[calc(100vh-18rem)] flex-col gap-y-8 my-4">
+              <Search client:load searchList={searchList} initialPosts={page.data} />
+            </div>
+
+            <div class="flex justify-center">
+            <PaginationComponent
+              currentPage={page.currentPage}
+              totalPages={page.lastPage}
+              baseUrl="/page/"
+              firstPageHref="/"
+              client:load
+            />
+            </div>
+
+           </section>
+    
+    
+
+    
+  </section>
+</Layout>
