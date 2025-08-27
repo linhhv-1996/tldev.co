@@ -52,12 +52,12 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
   
   
   <section
-    class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-18rem),100%)_minmax(0px,1fr)] gap-y-6 px-4 md:px-6"
+    class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-18rem),100%)_minmax(0px,1fr)] gap-y-6 px-4 md:px-6 overflow-x-hidden"
   >
 
 
   <!-- Back button -->
-    <div class="col-start-2">
+    <div class="col-start-2 min-w-0">
       <Button
         id="back-btn"
         variant="outline"
@@ -133,7 +133,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
   >
     <Icon name="lucide:coffee" class="size-6" />
     <span class="text-sm font-medium">Keep TL;Dev free & independent →<br>
-      If this saved you time, toss a small bonus—no paywall, ever.</span>
+      If this saved you time, <br>toss a small bonus—no paywall, ever.</span>
   </a>
 </div>
 
