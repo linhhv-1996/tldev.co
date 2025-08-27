@@ -121,5 +121,9 @@ export default defineConfig({
     remarkPlugins: [remarkMath, remarkEmoji, remarkSectionize],
   },
 
-  adapter: cloudflare()
+  adapter: cloudflare({
+      platformProxy: {
+        enabled: true,
+      },
+    }),
 })
