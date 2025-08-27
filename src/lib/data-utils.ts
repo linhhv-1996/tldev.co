@@ -27,7 +27,6 @@ export async function getRecentPosts(
 
 
   const randomPostsPerDay = Object.values(postsByDay).map(postsForDay => {
-    const randomIndex = Math.floor(Math.random() * postsForDay.length)
     return postsForDay[0]
   })
 
