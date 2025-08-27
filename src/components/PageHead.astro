@@ -94,7 +94,7 @@ const pageTitle = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitl
           "@type": "Person",
           "name": post.data.authors ? post.data.authors[0] : SITE.author
         },
-        "keywords": post.data.tags ? post.data.tags.join(', ') : ''
+        "keywords": ''
       }))
     }
   })}

@@ -34,7 +34,7 @@ const postCanonicalUrl = new URL(postUrlWithoutTrailingSlash, SITE.href).toStrin
 <meta name="publisher" content={SITE.title} />
 <meta name="language" content={SITE.locale} />
 <link rel="canonical" href={postCanonicalUrl} />
-{post?.data.tags && <meta name="keywords" content={post.data.tags.join(', ')} />}
+<meta name="keywords" content="indie dev, indie hacker, dev" />
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content={title} />
@@ -64,12 +64,13 @@ const postCanonicalUrl = new URL(postUrlWithoutTrailingSlash, SITE.href).toStrin
 <meta name="twitter:creator" content={`@${SITE.author.replace(' ', '').toLowerCase()}`} />
 <meta name="twitter:site" content={`@${SITE.author.replace(' ', '').toLowerCase()}`} />
 
-{
+
+<!-- {
   post?.data.tags &&
     post.data.tags.map((tag: string) => {
       return <meta property="article:tag" content={tag} />
     })
-}
+} -->
 
 <!-- Enhanced JSON-LD Structured Data -->
 <script type="application/ld+json" is:inline set:html={JSON.stringify({
@@ -105,7 +106,7 @@ const postCanonicalUrl = new URL(postUrlWithoutTrailingSlash, SITE.href).toStrin
     "@type": "WebPage",
     "@id": postUrl
   },
-  "keywords": post?.data.tags ? post.data.tags.join(', ') : '',
+  "keywords": '',
   "url": postUrl,
   "inLanguage": SITE.locale,
   "isPartOf": {
@@ -113,8 +114,5 @@ const postCanonicalUrl = new URL(postUrlWithoutTrailingSlash, SITE.href).toStrin
     "@id": new URL("/blog/", SITE.href).toString(),
     "name": `${SITE.title} Blog`
   },
-  "about": post?.data.tags ? post.data.tags.map(tag => ({
-    "@type": "Thing",
-    "name": tag
-  })) : []
+  "about": []
 })} />

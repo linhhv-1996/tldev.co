@@ -39,7 +39,7 @@ export const GET: APIRoute = async ({ site }) => {
         description: post.data.description || '',
         pubDate: post.data.date,
         link: `/blog/${post.id}/`,
-        categories: post.data.tags || [],
+        categories: [],
         author: post.data.authors ? post.data.authors.join(', ') : SITE.author,
       })),
     });
