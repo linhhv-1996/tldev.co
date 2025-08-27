@@ -84,6 +84,18 @@ export default defineConfig({
         "@radix-ui/react-slot"
       ]
     },    
+    resolve: {
+      alias: {
+        // then chốt: dùng server.edge cho môi trường Workers
+        'react-dom/server': 'react-dom/server.edge',
+      },
+      // ưu tiên điều kiện dành cho runtime worker
+      conditions: ['workerd', 'worker', 'browser'],
+    },
+    ssr: {
+      // build cho webworker (Cloudflare Workers)
+      target: 'webworker',
+    },
   },
 
   server: {
