@@ -1,0 +1,63 @@
+---
+title: "The Craftsman's Code: How Henrik Builds macOS Apps like Alcove"
+description: "A deep dive into the philosophy of indie Mac developer Henrik, creator of Alcove and Klack. Learn his 'split strategy' for scope management, his obsession with detail, and his 'code-first' approach."
+date: 2025-08-27
+tags:
+authors:
+  - "Max/Wang"
+slug: "the-craftsman-code-how-henrik-builds-mac-os-apps-like-alcove"
+updatedDate: 2025-08-27
+---
+> Here are the core ideas and lessons from an interview by [Roman Tesliuk](https://x.com/RomaTesla) with [Henrik](https://x.com/henrikruscon), the solo developer behind the popular Mac apps Alcove and Klack.
+
+> **TL;DR:**
+>
+> * **A Maker's Philosophy:** Henrik is a self-taught developer who believes in learning by "breaking and fixing things," not by watching tutorials. This deep, first-principles approach to problem-solving is at the core of all his products.
+> * **The "Splitting" Strategy:** When faced with a competitor and creeping scope on his project (Pling), he didn't rush. He **split the project**, shipping the polished, ready-to-go features as a separate app (Alcove) and saving the bigger ideas for later.
+> * **An Obsession with Experience:** Alcove is designed to be a passive, seamless utility that feels like Apple itself built it. He went to extreme lengths—getting locked out of his own Mac four times—to perfect a single feature like the lock screen integration.
+> * **A Craftsman's Tech Philosophy:** He prioritizes minimal dependencies, privacy-first design, and going straight to code instead of creating mockups. He even builds his own tools, like a licensing server, to maintain full control.
+
+***
+
+
+Henrik, a solo developer, is the creator behind Alcove and Klack, two macOS apps beloved for their elegance and unique design philosophy. His story is not just about building software; it's about a steadfast product philosophy, extreme persistence, and a brilliant product management strategy.
+
+#### **1. The Maker's Mindset: Learning by Breaking Things**
+
+Henrik started coding at 13 and taught himself in a unique way: no tutorials, no courses.
+> "I just went straight to the code, tried things, broke stuff, fixed it, and iterated. Tutorials don’t really teach you to solve problems - they give you answers, but you never figure it out yourself."
+
+This mindset shapes everything he does. He believes that if you can't solve problems from scratch, you'll forever be stuck rebuilding things that already exist.
+
+#### **2. The Alcove Story: A Masterclass in Scope Management**
+
+Alcove, a utility that displays music, weather, and visuals in a minimal HUD on macOS, was actually born from a larger project called Pling.
+
+While building Pling, a competitor (Notch Nook) launched with a similar idea. At that moment, Henrik realized his own project was suffering from scope creep, trying to do too many things at once.
+
+Instead of rushing into a head-to-head battle with a bloated product, he made a strategic decision:
+**He "split" the project.**
+He took all the features that were already polished, functional, and made sense on their own, packaged them into a separate product, and launched it as **Alcove**. The rest of the grander vision was kept for Pling's future. This was a brilliant move in managing scope and prioritizing the delivery of value.
+
+#### **3. The Craftsman's Code: Philosophy and Tech Stack**
+
+##### **a. A "Seamless" Philosophy and an Obsession with Detail**
+Alcove is designed to "live" on your Mac passively and seamlessly. It has no large window or clunky UI; it just gently fades in when needed and disappears when it's not.
+
+This obsession with creating an "Apple-like" experience is best exemplified by the lock screen feature—a highly complex task with no documentation that could lock you out of your Mac.
+> "I got locked out four times while trying to get it working. But it was important to me... The first time it worked, I was so happy, because it meant I didn’t have to compromise."
+
+##### **b. A Tech Philosophy of "Less is More"**
+* **Minimal Dependencies:** Henrik prefers to write everything himself rather than using third-party libraries. In the long run, he finds this makes his code easier to maintain.
+* **Privacy First:** Alcove doesn't ask for invasive keyboard permissions. Instead, it "listens" for system changes like volume and brightness. It's more complex to build but respects the user.
+* **Straight to Code:** He rarely creates mockups. For a solo developer, coding directly is faster and provides a more accurate representation of the final product than design tools like Figma or Sketch.
+
+##### **c. The Tech Stack**
+* **App:** Swift, Xcode.
+* **Self-Built Licensing Server:** Laravel (PHP).
+* **Design:** Sketch (for its native feel and because he doesn't need collaboration features).
+* **Web:** Vue and Vite.
+* **Favorite Tools:** Nova (code editor), Postico (PostgreSQL client), Arc (browser).
+
+#### **Conclusion: Everything is an Intentional Iteration**
+Henrik believes that everything is an iteration of an existing idea. But if you understand *why* something works and repurpose it with intention, it becomes something entirely new and unique. This philosophy of thoughtful craftsmanship is the biggest lesson from his journey.
