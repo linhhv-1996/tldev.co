@@ -1,63 +1,62 @@
 ---
-title: "The Craftsman's Code: How Henrik Builds macOS Apps like Alcove"
-description: "A deep dive into the philosophy of indie Mac developer Henrik, creator of Alcove and Klack. Learn his 'split strategy' for scope management, his obsession with detail, and his 'code-first' approach."
-date: 2025-08-27
+title: "Pieter Levels: Indie hacking isn’t dead — it’s the new normal"
+description: "Concise, actionable takeaways from Pieter Levels’ interview on The Bootstrapped Founder: why indie hacking changed, how AI reshapes moats and margins, and what indie devs should do next."
+date: 2025-09-05
 tags:
 authors:
   - "Max/Wang"
-slug: "the-craftsman-code-how-henrik-builds-mac-os-apps-like-alcove"
-updatedDate: 2025-08-27
+slug: "pieter-levels-indie-hacking-new-normal"
+updatedDate: 2025-09-05
 ---
-> Here are the core ideas and lessons from an interview by [Roman Tesliuk](https://x.com/RomaTesla) with [Henrik](https://x.com/henrikruscon), the solo developer behind the popular Mac apps Alcove and Klack.
+> **Source note:** This is a summary of Pieter Levels’ interview on YouTube, [Arvid Kahl — The Bootstrapped Founder](https://www.youtube.com/watch?v=9Wjec3wh4p8).
 
 > **TL;DR:**
 >
-> * **A Maker's Philosophy:** Henrik is a self-taught developer who believes in learning by "breaking and fixing things," not by watching tutorials. This deep, first-principles approach to problem-solving is at the core of all his products.
-> * **The "Splitting" Strategy:** When faced with a competitor and creeping scope on his project (Pling), he didn't rush. He **split the project**, shipping the polished, ready-to-go features as a separate app (Alcove) and saving the bigger ideas for later.
-> * **An Obsession with Experience:** Alcove is designed to be a passive, seamless utility that feels like Apple itself built it. He went to extreme lengths—getting locked out of his own Mac four times—to perfect a single feature like the lock screen integration.
-> * **A Craftsman's Tech Philosophy:** He prioritizes minimal dependencies, privacy-first design, and going straight to code instead of creating mockups. He even builds his own tools, like a licensing server, to maintain full control.
+> “Indie hacking” isn’t dead; it matured into the default way to build. That raises the bar: better products, stronger distribution, and faster iteration. In AI, technical moats are thin, churn is high, and GPU/API costs squeeze margins—so the pragmatic play is **sell first → do it manually → automate later**, use a stack you ship fast with, let **SEO + TikTok/creators** pull demand, and wrap your infra so you can **swap providers** quickly. Surf the short-term waves while cultivating a **Lindy** asset for stability.
 
 ***
 
+#### Pieter Levels: Indie hacking isn’t dead — it’s the new normal
 
-Henrik, a solo developer, is the creator behind Alcove and Klack, two macOS apps beloved for their elegance and unique design philosophy. His story is not just about building software; it's about a steadfast product philosophy, extreme persistence, and a brilliant product management strategy.
+“**Indie hacking is dead.**” Pieter Levels tweeted that once, and most people stopped at the first line. What he meant: indie hacking grew up. It moved from a scrappy subculture to **the default path** many founders take. When something becomes normal, competition thickens, expectations rise, and Big Tech starts **copying features fast**. The game shifts from clever hacks to **disciplined product and distribution**.
 
-#### **1. The Maker's Mindset: Learning by Breaking Things**
+#### When “hacking” becomes the norm
 
-Henrik started coding at 13 and taught himself in a unique way: no tutorials, no courses.
-> "I just went straight to the code, tried things, broke stuff, fixed it, and iterated. Tutorials don’t really teach you to solve problems - they give you answers, but you never figure it out yourself."
+Back in 2014–2016, indie hacking was still novel. By 2023+, it’s mainstream enough that **larger teams watch indie makers** for ideas. User expectations climbed with it: smooth UX, solid social proof, and real distribution. Winning as an indie isn’t about obscure tech tricks; it’s about **learning, shipping, and iterating faster** than everyone else.
 
-This mindset shapes everything he does. He believes that if you can't solve problems from scratch, you'll forever be stuck rebuilding things that already exist.
+#### The AI era: thin moats, hard retention, rising costs
 
-#### **2. The Alcove Story: A Masterclass in Scope Management**
+Most AI startups sit on the same foundations: LLMs like GPT, image models like Stable Diffusion, and similar training/inference APIs. That makes **moats very thin**—a smart competitor can rebuild what you did in a few months. **Retention is tough** because many users just “try and leave.” Meanwhile, **GPU and platform costs are volatile**, which quickly compresses margins. Pieter recalls a provider bumping fine-tuning from \$3 to \$20 per run right when revenue spiked. The lesson is simple: **don’t bet your model on prices going down**; design so you **survive even when they go up**.
 
-Alcove, a utility that displays music, weather, and visuals in a minimal HUD on macOS, was actually born from a larger project called Pling.
+#### Pieter’s process: sell first, manual first, then automate
 
-While building Pling, a competitor (Notch Nook) launched with a similar idea. At that moment, Henrik realized his own project was suffering from scope creep, trying to do too many things at once.
+Pieter’s approach is deliberately unromantic. Launch a minimal page, **take real payments**, and **do the work by hand** before writing systems. For AvatarAI, early orders were fulfilled manually through the night. Only after the workflow and demand were clear did he **automate the backbone** within a week. This “concierge first” stance answers two critical questions at once: **will anyone pay**, and **what steps actually create value**.
 
-Instead of rushing into a head-to-head battle with a bloated product, he made a strategic decision:
-**He "split" the project.**
-He took all the features that were already polished, functional, and made sense on their own, packaged them into a separate product, and launched it as **Alcove**. The rest of the grander vision was kept for Pling's future. This was a brilliant move in managing scope and prioritizing the delivery of value.
+#### Technology: pragmatic, Lindy, and anti–over-engineering
 
-#### **3. The Craftsman's Code: Philosophy and Tech Stack**
+Pieter refuses to “worship” stacks. PHP/jQuery, modern JS—use **whatever makes you ship and fix fast**. Repeat work a number of times, **then** abstract; avoid early elegance that slows learning. That’s the **Lindy** spirit: tech that’s survived reality is often the most useful. Pragmatic doesn’t mean sloppy—keep code structured so others can take over and modules can be swapped without drama.
 
-##### **a. A "Seamless" Philosophy and an Obsession with Detail**
-Alcove is designed to "live" on your Mac passively and seamlessly. It has no large window or clunky UI; it just gently fades in when needed and disappears when it's not.
+#### Distribution is the moat: SEO and creators beat press
 
-This obsession with creating an "Apple-like" experience is best exemplified by the lock screen feature—a highly complex task with no documentation that could lock you out of your Mac.
-> "I got locked out four times while trying to get it working. But it was important to me... The first time it worked, I was so happy, because it meant I didn’t have to compromise."
+Media logos are nice; **customers come from SEO and creators**. One creator video took MRR from \$12k to \$40–50k and kept it elevated. Package your problem–solution in the **language of search** (pages for money keywords) and the **formats algorithms prefer** (short, curiosity-driven clips). The best social proof is **real metrics, real customer outcomes, and real workflows**—not a glossy press kit.
 
-##### **b. A Tech Philosophy of "Less is More"**
-* **Minimal Dependencies:** Henrik prefers to write everything himself rather than using third-party libraries. In the long run, he finds this makes his code easier to maintain.
-* **Privacy First:** Alcove doesn't ask for invasive keyboard permissions. Instead, it "listens" for system changes like volume and brightness. It's more complex to build but respects the user.
-* **Straight to Code:** He rarely creates mockups. For a solo developer, coding directly is faster and provides a more accurate representation of the final product than design tools like Figma or Sketch.
+#### De-risking platform dependencies
 
-##### **c. The Tech Stack**
-* **App:** Swift, Xcode.
-* **Self-Built Licensing Server:** Laravel (PHP).
-* **Design:** Sketch (for its native feel and because he doesn't need collaboration features).
-* **Web:** Vue and Vite.
-* **Favorite Tools:** Nova (code editor), Postico (PostgreSQL client), Arc (browser).
+AI startups stack dependencies: GPUs, model vendors, APIs, infrastructure. Defense looks boring but saves companies: **abstract your model/provider layer**, write adapters so you can **switch quickly**, and **multi-source** GPU/compute. Track price and performance like business KPIs, not mere technical details. Guarding **gross margin** belongs right next to building features.
 
-#### **Conclusion: Everything is an Intentional Iteration**
-Henrik believes that everything is an iteration of an existing idea. But if you understand *why* something works and repurpose it with intention, it becomes something entirely new and unique. This philosophy of thoughtful craftsmanship is the biggest lesson from his journey.
+#### X/Twitter has new rules: long-form, sharp hooks, watch time
+
+The algorithm now favors **watch time** and early engagement signals. That opens the door for **long-form posts** on X—but only if you lead with a **tight 1–2 sentence hook** that earns the first few seconds. Pieter still “says it straight,” but he **formats for the platform**. If you build in public, think like an **editor**: one message, many formats.
+
+#### Cycles and balance: ride waves, plant Lindy assets
+
+Economies and cultures move in cycles; AI is the current wave. Pieter leaned in—trading stability for speed and pressure. On the other side, **Nomad List** shows the value of **Lindy assets**: low cost, steady revenue, slow-and-sure improvements. The practical equilibrium is to **surf waves for upside** while **growing something durable** to anchor your time and mind.
+
+#### A practical path for indie devs today
+
+Start with **a painful, wallet-attached problem** you can observe in subreddits, TikTok, and niche communities. Don’t build a system—**fake the door** with a landing page, payment, and a form. Fulfill the first dozen orders **by hand** to learn the real workflow. When a common pattern emerges, **automate the spine** and keep a few steps manual to keep learning. In parallel, build **search-intent pages** and **short demos** (before/after, real outcomes). Always measure **unit costs** (GPU/API per task), **gross margin**, and **churn/retention**; adjust pricing and packaging to actual usage frequency. And set a **work–rest cadence** so you don’t burn out chasing model releases.
+
+#### Conclusion
+
+Indie hacking didn’t die—it **graduated**. Today, the edge comes from **how fast you learn and ship**, **how well you distribute**, **how little you depend on any single platform**, and **how honestly you tell the product’s story**. Sell first, do it manually, automate later, then optimize. **Surf to go fast; plant to go far.**
+
