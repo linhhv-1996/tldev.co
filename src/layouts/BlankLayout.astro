@@ -1,0 +1,43 @@
+---
+// src/layouts/BlankLayout.astro
+
+// Định nghĩa các biến đầu vào (Props) để mỗi page có title/description riêng
+interface Props {
+  title: string;
+  description?: string;
+  image?: string; // Ảnh thumbnail khi share lên MXH
+}
+
+const { 
+  title, 
+  description = "Ship your startup in days, not weeks", 
+  image = "/og-image.png" 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en"> <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <title>{title}</title>
+
+    </head>
+  <body class="bg-white text-base text-gray-900"> 
+    <slot />
+
+  </body>
+</html>
