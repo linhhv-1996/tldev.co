@@ -12,7 +12,7 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
   description="Stop wasting 2 months on setup. A real case study on buying speed and freedom."
 >
   
-  <main class="min-h-screen bg-background text-foreground font-sans pb-0"> {/* Thêm padding-bottom để không bị Sticky Bar che nội dung cuối */}
+  <main class="min-h-screen bg-background text-foreground font-sans pb-0">
     <div class="max-w-3xl mx-auto px-5 py-16 md:py-16">
       
       {/* --- HEADER --- */}
@@ -70,15 +70,24 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
           <p class="mb-4">
             To test if this boilerplate was worth the money, I used it to build a Reddit Lead Finder tool. This was a "tough" app that needed heavy data processing, not just a simple static landing page.
           </p>
-          <p class="mb-4">
-            If I had coded it from scratch, I calculated it would cost me:
-          </p>
-          <ul class="list-disc pl-6 space-y-2 mb-6 marker:text-primary">
-            <li>3 days for NextJS + Tailwind + Component setup.</li>
-            <li>5 days for Database + API Routes setup.</li>
-            <li><strong>7 days struggling with Stripe/Lemon Squeezy Webhooks</strong> (The most painful part).</li>
-            <li><strong>Total:</strong> ~1 month just to reach a basic MVP.</li>
-          </ul>
+          
+          <div class="my-6 bg-muted/30 p-6 rounded-lg border border-dashed border-border">
+            <p class="font-bold mb-3">If I had coded it from scratch, here is the harsh reality:</p>
+            <ul class="space-y-2 font-mono text-sm md:text-base text-muted-foreground">
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">4 hrs</span> <span>to set up emails</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ 6 hrs</span> <span>designing a landing page</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ 4 hrs</span> <span>to handle Stripe webhooks</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ 2 hrs</span> <span>for SEO tags</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ 1 hr</span> <span>applying for Google Oauth</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ 3 hrs</span> <span>for DNS records</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ 2 hrs</span> <span>for protected API routes</span></li>
+              <li class="flex gap-3"><span class="text-red-500 font-bold min-w-[4rem] text-right">+ ∞ hrs</span> <span>overthinking...</span></li>
+            </ul>
+            <div class="mt-4 pt-4 border-t border-border flex gap-3 font-bold text-foreground text-lg">
+              <span class="min-w-[4rem] text-right">= 22+</span>
+              <span>hours of headaches 🤯</span>
+            </div>
+          </div>
 
           <h3 class="text-xl font-bold mt-8 mb-3">But with ShipFast, my process was shortened to:</h3>
           <ol class="list-decimal pl-6 space-y-3 mb-6">
@@ -123,6 +132,22 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
           <p>
             I've archived that project, cloned the ShipFast repo again, and am now building my next SaaS. Same codebase, used for N projects forever.
           </p>
+
+          {/* --- IMAGE 1 --- */}
+      <figure class="my-10 group">
+        <div class="rounded-xl overflow-hidden shadow-2xl border border-border bg-muted transition-transform duration-500 hover:scale-[1.01]">
+            <img 
+              src="/new-pj.png" 
+              alt="Just coding logic, zero config headaches." 
+              class="w-full h-auto object-cover"
+              loading="eager" 
+            />
+        </div>
+        <figcaption class="text-center text-xs text-muted-foreground mt-3 italic">
+          (Just coding logic, zero config headaches.)
+        </figcaption>
+      </figure>
+
         </section>
 
         <hr class="border-border" />
@@ -232,7 +257,6 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
 </BlankLayout>
 
 <style>
-  /* Tiện ích để hỗ trợ Safe Area trên iPhone đời mới (tai thỏ) */
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom, 20px);
   }
