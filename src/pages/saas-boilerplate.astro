@@ -3,7 +3,7 @@ import BlankLayout from '../layouts/BlankLayout.astro';
 import { Button } from '@/components/ui/button';
 
 // --- CONFIG ---
-const AFFILIATE_LINK = "https://shipfa.st/?via=your-affiliate-id"; // Thay Link của bạn vào đây
+const AFFILIATE_LINK = "https://shipfa.st/?via=lindane"; // Thay Link của bạn vào đây
 const DISCOUNT_TEXT = "Save ~40h of setup time";
 ---
 
@@ -216,11 +216,11 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
           </p>
           
           <div class="flex flex-col items-center gap-3">
-            <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer" class="w-full md:w-auto">
+            <a id="btn-buy-main" href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer" class="w-full md:w-auto">
               {/* BIG DESKTOP CTA BUTTON */}
               <Button 
                 size="lg" 
-                className="cursor-pointer w-full md:w-auto text-lg px-10 py-8 rounded-full font-bold shadow-xl shadow-primary/30 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 bg-primary hover:bg-primary/90 text-primary-foreground border-2 border-transparent hover:border-white/20"
+                className="cursor-pointer w-full md:w-auto text-sm md:text-lg px-4 md:px-10 py-6 md:py-8 h-auto whitespace-normal leading-tight rounded-full font-bold shadow-xl shadow-primary/30 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 bg-primary hover:bg-primary/90 text-primary-foreground border-2 border-transparent hover:border-white/20"
               >
                 ⚡ GET SHIPFAST & START SHIPPING
               </Button>
@@ -228,6 +228,12 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
             <p class="text-sm text-muted-foreground bg-background/50 px-3 py-1 rounded-full border">
               🎁 {DISCOUNT_TEXT}
             </p>
+
+            <p class="text-xs text-muted-foreground/60 mt-4 max-w-sm mx-auto leading-relaxed">
+            Transparency: I may earn a commission if you click this link and purchase. 
+            This comes at no extra cost to you and helps support my content.
+            </p>
+
           </div>
         </section>
 
@@ -245,7 +251,7 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
           <span class="font-bold text-sm">ShipFast Boilerplate</span>
           <span class="text-xs text-muted-foreground line-through">$299 value</span>
         </div>
-        <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer" class="flex-1">
+        <a id="btn-buy-mobile" href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer" class="flex-1">
           <Button className="cursor-pointer w-full font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90 active:scale-95 transition-transform">
             Get it now 👉
           </Button>
@@ -258,6 +264,6 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
 
 <style>
   .pb-safe {
-    padding-bottom: env(safe-area-inset-bottom, 20px);
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 10px));
   }
 </style>
