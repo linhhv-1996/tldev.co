@@ -38,19 +38,6 @@ const {
     <meta property="twitter:image" content={image} />
 
     <title>{title}</title>
-
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17126319466"></script>
-    <script>
-      // @ts-ignore
-      window.dataLayer = window.dataLayer || [];
-      // @ts-ignore
-      function gtag(){dataLayer.push(arguments);}
-      // @ts-ignore
-      gtag('js', new Date());
-      // @ts-ignore
-      gtag('config', 'AW-17126319466');
-    </script>
-
   </head>
   <body class="bg-background text-foreground antialiased font-sans"> 
     <slot />
