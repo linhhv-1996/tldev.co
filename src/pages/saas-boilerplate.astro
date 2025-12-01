@@ -216,7 +216,13 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
           </p>
           
           <div class="flex flex-col items-center gap-3">
-            <a id="btn-buy-main" href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer" class="w-full md:w-auto">
+            <a id="btn-buy-main" 
+                href={AFFILIATE_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full md:w-auto" 
+                onclick="gtag('event', 'conversion', {'send_to': 'AW-17126319466/RQakCIPn48kbEOrKu-Y_'});"
+                >
               {/* BIG DESKTOP CTA BUTTON */}
               <Button 
                 size="lg" 
@@ -251,7 +257,13 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
           <span class="font-bold text-sm">ShipFast Boilerplate</span>
           <span class="text-xs text-muted-foreground line-through">$299 value</span>
         </div>
-        <a id="btn-buy-mobile" href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer" class="flex-1">
+        <a id="btn-buy-mobile" 
+            href={AFFILIATE_LINK} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex-1"
+            onclick="gtag('event', 'conversion', {'send_to': 'AW-17126319466/RQakCIPn48kbEOrKu-Y_'});"
+            >
           <Button className="cursor-pointer w-full font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90 active:scale-95 transition-transform">
             Get it now 👉
           </Button>
