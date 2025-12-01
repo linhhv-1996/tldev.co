@@ -1,11 +1,14 @@
 ---
 // src/layouts/BlankLayout.astro
 
-// Định nghĩa các biến đầu vào (Props) để mỗi page có title/description riêng
+// 👇 THÊM 2 DÒNG NÀY ĐỂ NHẬN CSS VÀ FONTS
+import '@/styles/global.css';
+import '@/styles/typography.css';
+
 interface Props {
   title: string;
   description?: string;
-  image?: string; // Ảnh thumbnail khi share lên MXH
+  image?: string;
 }
 
 const { 
@@ -16,7 +19,8 @@ const {
 ---
 
 <!doctype html>
-<html lang="en"> <head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
@@ -34,10 +38,8 @@ const {
     <meta property="twitter:image" content={image} />
 
     <title>{title}</title>
-
-    </head>
-  <body class="bg-white text-base text-gray-900"> 
+  </head>
+  <body class="bg-background text-foreground antialiased font-sans"> 
     <slot />
-
   </body>
 </html>
