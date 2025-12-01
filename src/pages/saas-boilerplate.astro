@@ -220,8 +220,11 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
                 href={AFFILIATE_LINK} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="w-full md:w-auto" 
-                onclick="gtag('event', 'conversion', {'send_to': 'AW-17126319466/RQakCIPn48kbEOrKu-Y_'});"
+                class="w-full md:w-auto"
+                onclick="gtag('event', 'conversion', {
+                'send_to': 'AW-17126319466/RQakCIPn48kbEOrKu-Y_',
+                'transaction_id': '' + Date.now()
+                });"
                 >
               {/* BIG DESKTOP CTA BUTTON */}
               <Button 
@@ -262,7 +265,10 @@ const DISCOUNT_TEXT = "Save ~40h of setup time";
             target="_blank" 
             rel="noopener noreferrer" 
             class="flex-1"
-            onclick="gtag('event', 'conversion', {'send_to': 'AW-17126319466/RQakCIPn48kbEOrKu-Y_'});"
+            onclick="gtag('event', 'conversion', {
+            'send_to': 'AW-17126319466/RQakCIPn48kbEOrKu-Y_',
+            'transaction_id': '' + Date.now()
+            });"
             >
           <Button className="cursor-pointer w-full font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90 active:scale-95 transition-transform">
             Get it now 👉
